@@ -12,7 +12,7 @@ public class CalculadoraTrigonometrica {
     public static void main(String[] args) {
         Scanner teclado =new Scanner(System.in);
         System.out.println("Escoja la medida del angulo en radianes");
-        var medida= teclado.nextInt();
+        double medida= teclado.nextInt();
         System.out.println("Escriba 1 para funciones trigonometricas normales");
         System.out.println("Escriba 2 para funciones trigonometricas inversas");
         System.out.println("Escriba 3 para funciones trigonometricas hiperbólicas");
@@ -30,14 +30,16 @@ public class CalculadoraTrigonometrica {
         int tipo_dos=teclado.nextInt();
         switch (tipo_dos){
             case 1: funcionEspecifica="Seno";
-            System.out.println(Math.sin(medida));
-           
+                System.out.println("Radianes: " + Math.sin(medida));
+                System.out.println("Grados: " + Math.sin(Math.toDegrees (medida)));
             break;
             case 2: funcionEspecifica="Coseno";
-            System.out.println(Math.cos(medida));
+            System.out.println("Radianes: " + Math.cos(medida));
+            System.out.println("Grados: " + Math.cos(Math.toDegrees (medida)));
             break;
             case 3: funcionEspecifica="Tangente";
-            System.out.println(Math.tan(medida));
+            System.out.println("Radianes: "+Math.tan(medida));
+            System.out.println("Grados: " + Math.tan(Math.toDegrees (medida)));
             break;
             default: funcionEspecifica="Inexistente";
         }
@@ -54,12 +56,15 @@ public class CalculadoraTrigonometrica {
         switch (tipo_dos){
             case 1: funcionEspecifica="ArcoSeno";
             System.out.println(Math.asin(medida));
+            System.out.println("Grados: " + Math.asin(Math.toDegrees (medida)));
             break;
             case 2: funcionEspecifica="ArcoCoseno";
             System.out.println(Math.acos(medida));
+            System.out.println("Grados: " + Math.acos(Math.toDegrees (medida)));
             break;
             case 3: funcionEspecifica="ArcoTangente";
             System.out.println(Math.atan(medida));
+            System.out.println("Grados: " + Math.atan(Math.toDegrees (medida)));
             break;
             default: funcionEspecifica="Inexistente";
         }
@@ -76,12 +81,15 @@ public class CalculadoraTrigonometrica {
         switch (tipo_dos){
             case 1: funcionEspecifica="seno hiperbólico";
             System.out.println(Math.sinh(medida));
+            System.out.println("Grados: " + Math.sinh(Math.toDegrees (medida)));
              break;
             case 2: funcionEspecifica="coseno hiperbólico";
             System.out.println(Math.cosh(medida));
+            System.out.println("Grados: " + Math.cosh(Math.toDegrees (medida)));
              break;
             case 3: funcionEspecifica="tangente hiperbólico";
             System.out.println(Math.tanh(medida));
+            System.out.println("Grados: " + Math.tanh(Math.toDegrees (medida)));
             break;
             default: funcionEspecifica="Inexistente";
                 }
