@@ -167,13 +167,18 @@ public class CalculadoraTrigonometrica {
         else {funcionEspecifica="Inexistente";
         }
         }
+        
             }
             System.out.println("La funcion seleccionada es "+ funcionEspecifica);
         }
-    
+         else {
+    System.out.println("Unidad angular inexistente");
+}
         }
-        
+ 
     }
+    
+      
         }
     
         
